@@ -1,18 +1,20 @@
-# mcp-data-europa
+# @pipeworx/data-europa
 
-data.europa.eu MCP — EU open-data hub.
+[data.europa.eu](https://data.europa.eu) MCP — official open-data portal of the European Union (~1.6M datasets aggregated from EU institutions and 27 member states). CKAN-compatible API. Keyless.
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 673+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1394+ live data sources.
 
 ## Tools
 
-| Tool | Description |
-|------|-------------|
-| `search` | Search datasets. |
-| `package` | Single dataset by id. |
-| `organizations` | List publishing organizations. |
-| `groups` | List themes/groups. |
-| `tags` | List or search tags. |
+- `search(query, fq?, rows?, start?, sort?)` — package search
+- `package(id)` — single package by id
+- `organizations(limit?)` — list publishing organizations
+- `groups(limit?)` — list themes/groups
+- `tags(query?, limit?)` — list/search tags
+
+## Data source
+
+`https://data.europa.eu/api/hub/search/`
 
 ## Quick Start
 
@@ -28,7 +30,7 @@ Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 }
 ```
 
-Or connect to the full Pipeworx gateway for access to all 673+ data sources:
+Or connect to the full Pipeworx gateway for access to all 1394+ data sources:
 
 ```json
 {
@@ -52,7 +54,7 @@ The gateway picks the right tool and fills the arguments automatically.
 
 ## More
 
-- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [Docs and guides](https://pipeworx.io/docs)
 - [pipeworx.io](https://pipeworx.io)
 
 ## License
