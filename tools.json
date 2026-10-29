@@ -1,0 +1,85 @@
+[
+  {
+    "name": "search",
+    "description": "Search the EU open-data portal (data.europa.eu) for datasets by free-text query; supports Solr filter expressions (e.g. country.iso:DE), pagination via rows/start, and sorting. Returns dataset titles, descriptions, and publisher info.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string"
+        },
+        "fq": {
+          "type": "string",
+          "description": "Solr filter (e.g. \"country.iso:DE\")."
+        },
+        "rows": {
+          "type": "number",
+          "description": "1-1000 (default 25)."
+        },
+        "start": {
+          "type": "number"
+        },
+        "sort": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "package",
+    "description": "Fetch a single EU open-data dataset record by its portal ID, returning full metadata including title, description, publisher, license, distributions, and tags.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  },
+  {
+    "name": "organizations",
+    "description": "List EU open-data portal publishing organizations (EU institutions, member-state agencies, etc.) with their names and dataset counts; limit controls page size (default 100, max 1000).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "limit": {
+          "type": "number"
+        }
+      }
+    }
+  },
+  {
+    "name": "groups",
+    "description": "List thematic dataset categories (groups) on the EU open-data portal (e.g. environment, transport, economy); returns category names and IDs for use as filters in search.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "limit": {
+          "type": "number"
+        }
+      }
+    }
+  },
+  {
+    "name": "tags",
+    "description": "List or search keyword tags used to annotate datasets on the EU open-data portal; pass query to filter by prefix, limit controls page size (default 100).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "number"
+        }
+      }
+    }
+  }
+]
