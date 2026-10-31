@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-data-europa",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "data.europa.eu MCP — EU open-data hub.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "data-europa",
     "gatewaySlug": "data-europa",
-    "sourceHash": "v1-8e8938624a83dc30a93ca7e250910ba88f8c0a859cdc33680ef8450b98e217bd",
-    "sourceCommit": "0b3faaa4d85299a961dd86dea75a0f0e1dad280c"
+    "sourceHash": "v1-178a656bc75d2443b1787ccbb7c60b2e619d625b00223b3117d0c1d1a143dc94",
+    "sourceCommit": "5ce1a05186d46479e23865c66bdb8579d8de445e"
   }
 }
